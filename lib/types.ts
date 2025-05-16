@@ -91,3 +91,14 @@ export interface Comment {
   content: string
   createdAt: string
 }
+
+// Exam file types
+export interface ExamFile {
+  id: number
+  title: string
+  year: number
+  type: "exam" | "midterm" | "final" | "induction"
+  semester?: string // For exams with semester designation like "A" or "B"
+  fileUrl: string
+  uploadDate: string
+}

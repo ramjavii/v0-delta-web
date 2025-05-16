@@ -1,4 +1,13 @@
-import type { User, CalendarEvent, Problem, ForumPost, Comment, LeaderboardEntry, Visualization } from "./types"
+import type {
+  User,
+  CalendarEvent,
+  Problem,
+  ForumPost,
+  Comment,
+  LeaderboardEntry,
+  Visualization,
+  ExamFile,
+} from "./types"
 
 // Mock user data
 export const mockUsers: User[] = [
@@ -165,5 +174,123 @@ export const mockVisualizations: Visualization[] = [
       yAxisLabel: "y",
       title: "Trigonometric Functions",
     },
+  },
+]
+
+// Mock exam files
+export const mockExamFiles: ExamFile[] = [
+  {
+    id: 1,
+    title: "Exam 2024",
+    year: 2024,
+    type: "exam",
+    fileUrl: "/sample-exams/exam-2024.pdf",
+    uploadDate: new Date(2024, 0, 15).toISOString(),
+  },
+  {
+    id: 2,
+    title: "Exam 2023",
+    year: 2023,
+    type: "exam",
+    fileUrl: "/sample-exams/exam-2023.pdf",
+    uploadDate: new Date(2023, 0, 15).toISOString(),
+  },
+  {
+    id: 3,
+    title: "Exam 2022",
+    year: 2022,
+    type: "exam",
+    fileUrl: "/sample-exams/exam-2022.pdf",
+    uploadDate: new Date(2022, 0, 15).toISOString(),
+  },
+  {
+    id: 4,
+    title: "Exam 2021 B",
+    year: 2021,
+    type: "exam",
+    semester: "B",
+    fileUrl: "/sample-exams/exam-2021-b.pdf",
+    uploadDate: new Date(2021, 6, 15).toISOString(),
+  },
+  {
+    id: 5,
+    title: "Exam 2021 A",
+    year: 2021,
+    type: "exam",
+    semester: "A",
+    fileUrl: "/sample-exams/exam-2021-a.pdf",
+    uploadDate: new Date(2021, 0, 15).toISOString(),
+  },
+  {
+    id: 6,
+    title: "Exam 2020",
+    year: 2020,
+    type: "exam",
+    fileUrl: "/sample-exams/exam-2020.pdf",
+    uploadDate: new Date(2020, 0, 15).toISOString(),
+  },
+  {
+    id: 7,
+    title: "Midterm 2019",
+    year: 2019,
+    type: "midterm",
+    fileUrl: "/sample-exams/midterm-2019.pdf",
+    uploadDate: new Date(2019, 3, 15).toISOString(),
+  },
+  {
+    id: 8,
+    title: "Midterm 2018",
+    year: 2018,
+    type: "midterm",
+    fileUrl: "/sample-exams/midterm-2018.pdf",
+    uploadDate: new Date(2018, 3, 15).toISOString(),
+  },
+  {
+    id: 9,
+    title: "Final 2023",
+    year: 2023,
+    type: "final",
+    fileUrl: "/sample-exams/final-2023.pdf",
+    uploadDate: new Date(2023, 5, 15).toISOString(),
+  },
+  {
+    id: 10,
+    title: "Final 2022",
+    year: 2022,
+    type: "final",
+    fileUrl: "/sample-exams/final-2022.pdf",
+    uploadDate: new Date(2022, 5, 15).toISOString(),
+  },
+  {
+    id: 11,
+    title: "Final 2021",
+    year: 2021,
+    type: "final",
+    fileUrl: "/sample-exams/final-2021.pdf",
+    uploadDate: new Date(2021, 5, 15).toISOString(),
+  },
+  {
+    id: 12,
+    title: "Final 2020",
+    year: 2020,
+    type: "final",
+    fileUrl: "/sample-exams/final-2020.pdf",
+    uploadDate: new Date(2020, 5, 15).toISOString(),
+  },
+  {
+    id: 13,
+    title: "Final 2019",
+    year: 2019,
+    type: "final",
+    fileUrl: "/sample-exams/final-2019.pdf",
+    uploadDate: new Date(2019, 5, 15).toISOString(),
+  },
+  {
+    id: 14,
+    title: "Final 2018",
+    year: 2018,
+    type: "final",
+    fileUrl: "/sample-exams/final-2018.pdf",
+    uploadDate: new Date(2018, 5, 15).toISOString(),
   },
 ]

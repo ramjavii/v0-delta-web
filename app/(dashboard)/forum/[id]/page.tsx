@@ -14,6 +14,7 @@ import { ArrowLeft, MessageSquare } from "lucide-react"
 import Link from "next/link"
 import { format, parseISO } from "date-fns"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { useUser } from "@/contexts/user-context"
 
 export default function PostDetailPage() {
   const { id } = useParams()
@@ -23,6 +24,7 @@ export default function PostDetailPage() {
   const [newComment, setNewComment] = useState("")
   const [isLoading, setIsLoading] = useState(true)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const { user } = useUser()
   const { toast } = useToast()
 
   useEffect(() => {

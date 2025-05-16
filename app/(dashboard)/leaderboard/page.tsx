@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label"
 import { useToast } from "@/components/ui/use-toast"
 import { Trophy, Search, Medal } from "lucide-react"
-import { useAuth } from "@/contexts/auth-context"
+import { useUser } from "@/contexts/user-context"
 
 export default function LeaderboardPage() {
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([])
@@ -17,7 +17,7 @@ export default function LeaderboardPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState("")
   const [limit, setLimit] = useState("10")
-  const { user } = useAuth()
+  const { user } = useUser()
   const { toast } = useToast()
 
   useEffect(() => {

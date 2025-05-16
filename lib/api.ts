@@ -299,3 +299,32 @@ export const forumAPI = {
     return { success: true, commentId: 999 }
   },
 }
+
+// Add this to the existing api.ts file, after the other API objects
+
+// Import the mock exam files
+import { mockExamFiles } from "./mock-data"
+
+// Exams API calls
+export const examsAPI = {
+  getExamFiles: async (type?: string) => {
+    await simulateDelay()
+
+    if (type && type !== "all") {
+      return mockExamFiles.filter((file) => file.type === type)
+    }
+
+    return mockExamFiles
+  },
+
+  getExamFileById: async (id: number) => {
+    await simulateDelay()
+    const file = mockExamFiles.find((file) => file.id === id)
+
+    if (!file) {
+      throw new Error("Exam file not found")
+    }
+
+    return file
+  },
+}

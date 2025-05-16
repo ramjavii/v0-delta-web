@@ -10,8 +10,8 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 border-b bg-background">
+    <div className="flex min-h-screen flex-col bg-black">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
         <div className="flex h-16 items-center px-4 sm:px-6">
           <div className="hidden md:block">
             <MainNav />

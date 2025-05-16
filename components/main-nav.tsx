@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { BookOpen, Calendar, Home, MessageSquare, Trophy, LineChart } from "lucide-react"
+import { BookOpen, Calendar, Home, MessageSquare, Trophy, LineChart, FileText } from "lucide-react"
 
 const navItems = [
   {
@@ -15,6 +15,11 @@ const navItems = [
     name: "Problems",
     href: "/problems",
     icon: BookOpen,
+  },
+  {
+    name: "Past Exams",
+    href: "/past-exams",
+    icon: FileText,
   },
   {
     name: "Calendar",
@@ -44,7 +49,7 @@ export function MainNav() {
   return (
     <nav className="flex items-center space-x-6">
       <Link href="/dashboard" className="flex items-center space-x-2">
-        <span className="font-bold text-xl text-primary">DELTA</span>
+        <span className="font-bold text-xl text-white">DELTA</span>
       </Link>
       <div className="flex items-center space-x-4">
         {navItems.map((item) => (
@@ -52,8 +57,11 @@ export function MainNav() {
             key={item.href}
             href={item.href}
             className={cn(
-              "flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary",
-              pathname === item.href || pathname.startsWith(`${item.href}/`) ? "text-primary" : "text-muted-foreground",
+              "flex items-center space-x-1 text-sm font-medium transition-colors hover:text-white",
+              pathname === item.href || pathname.startsWith(`${item.href}/`) ? "text-white" : "text-gray-400",
+              pathname === item.href || pathname.startsWith(`${item.href}/`)
+                ? "after:block after:h-0.5 after:w-full after:bg-brand-red after:mt-0.5"
+                : "",
             )}
           >
             <item.icon className="h-4 w-4" />

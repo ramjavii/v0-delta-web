@@ -24,7 +24,7 @@ import { useToast } from "@/components/ui/use-toast"
 import { CalendarIcon, Plus } from "lucide-react"
 import { Calendar as CalendarComponent } from "@/components/ui/calendar"
 import { format, parseISO, startOfMonth, endOfMonth, addMonths, subMonths } from "date-fns"
-import { useAuth } from "@/contexts/auth-context"
+import { useUser } from "@/contexts/user-context"
 
 export default function CalendarPage() {
   const [events, setEvents] = useState<CalendarEvent[]>([])
@@ -32,7 +32,7 @@ export default function CalendarPage() {
   const [currentMonth, setCurrentMonth] = useState(new Date())
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const { user } = useAuth()
+  const { user } = useUser()
   const { toast } = useToast()
 
   // Form state for creating a new event
